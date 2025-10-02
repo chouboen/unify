@@ -1,4 +1,30 @@
-//輪播
+//輪播區塊
+#carouselExampleCaptions {
+  .carousel-caption {
+    text-shadow: 2.5px 2.5px 4px rgba(0, 0, 0, 0.8); /* 黑色陰影，適應亮色背景 */
+  }
+  h5 {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-weight: 500;
+  }
+}
+
+.carousel-img {
+  height: 600px; /* 設定固定高度，您可調整為 400px 或其他值 */
+  object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  object-position: center; /* 圖片中心對齊 */
+}
+
+/* 響應式調整：小螢幕時高度可變 */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 300px; /* 手機版縮小高度 */
+  }
+}
 
 //首頁介紹區塊
 .intro {
