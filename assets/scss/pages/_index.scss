@@ -1,3 +1,237 @@
-.index-title {
-  font-size: 100px;
+// 字體設定
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+// 以下為CSS重置
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+// 以上為CSS重置
+
+/* 
+在 reset CSS 或全域樣式中為 * 設定 box-sizing: border-box，這裡額外針對偽元素補上，
+避免它們意外採用預設的 content-box 而導致排版錯誤。 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 以下設定通用樣式
+body {
+  max-width: 1920px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+a {
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+.display-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.text-center {
+  text-align: center;
+}
+
+//nav設定
+nav {
+  background-color: black;
+  color: white;
+  img {
+    padding: 10px 0;
+    margin-left: 50px;
+  }
+
+  //hover效果設定：https://ithelp.ithome.com.tw/m/articles/10279532
+  a {
+    color: white;
+    position: relative;
+  }
+  a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #ff0000;
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+    bottom: -8px;
+  }
+  a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+//輪播
+
+//首頁介紹區塊
+.intro {
+  .h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+//間距設定
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+.mr-50 {
+  margin-right: 50px;
+}
+.p-10 {
+  padding: 10px 0;
+}
+
+.divider {
+  border-bottom: 1px solid black;
 }

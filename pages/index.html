@@ -1,19 +1,84 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>國基冷凍工程股份有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/dog.jpg" style="width: 300px;" alt="cat">
-
-    <%- include('./layout/footer'); -%>
-
-    <script type="module" src="../main.js"></script>
+    <main>
+    <nav class="display-flex align-center justify-between">
+      <img src="./assets/logo.png" alt="Logo" />
+      <ul class="display-flex align-center p-10">
+        <li class="mr-20"><a href="#">關於國基</a></li>
+        <li class="mr-20"><a href="#">最新消息</a></li>
+        <li class="mr-50">
+          <a href="#">服務項目<i class="bi bi-chevron-down"></i></a>
+        </li>
+      </ul>
+    </nav>
+<!--    首頁大圖輪播  -->
+<!--   FIXME:圖片太大的問題   -->
+    <div id="carouselExampleCaptions" class="carousel slide mb-50 divider" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.int-un.com.tw/Sy_File/product2/1-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>測試
+        </h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.int-un.com.tw/Sy_File/product5/1-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.int-un.com.tw/Sy_File/product4/3-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--    首頁介紹區塊    -->
+    <div class="intro text-center mb-50 divider">
+    <h1 class="h1 mb-20">國基冷凍工程股份有限公司</h1>
+    <p class="mb-10">國基冷凍是一家以冷凍領域為核心的綜合性企業，專注於冷凍系統設備的買賣、維修服務、工程設計及機組組裝業務。
+</p>
+    <p class="mb-10">歷經二十六年的深耕經營，在全體同仁的共同努力下，我們不斷突破自我，追求卓越。
+</p>
+    <p class="mb-20">為因應時代變遷與產業發展，我們持續創新，致力於提供高品質的產品與服務，滿足客戶多元需求。</p>
+    <h2 class="h2">創新｜品質｜傳承</h2>
+      </div>
+      <main>
+  
+   <%- include('./layout/footer'); -%>
+   <script type="module" src="../main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
   </body>
 </html>
