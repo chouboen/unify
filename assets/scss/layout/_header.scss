@@ -1,4 +1,16 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+nav {
+  background-color: white;
+  color: black;
+  .logo {
+    p {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  img {
+    width: 50px;
+    padding: 15px 0;
+    margin-left: 50px;
+  }
 }
