@@ -144,7 +144,13 @@ table {
 // 以下設定通用樣式
 body {
   max-width: 1920px;
+  margin: 0 auto;
   font-family: "Noto Sans TC", sans-serif;
+}
+
+main {
+  max-width: 1020px;
+  margin: 0 auto;
 }
 
 //hover效果設定：https://ithelp.ithome.com.tw/m/articles/10279532
@@ -174,6 +180,8 @@ a:hover::after {
 .display-flex {
   display: flex;
 }
+
+// 上下中
 .align-center {
   align-items: center;
 }
@@ -212,6 +220,10 @@ a:hover::after {
 }
 .mr-50 {
   margin-right: 50px;
+}
+
+.pl-10 {
+  padding-left: 10px;
 }
 .p-10 {
   padding: 10px 0;

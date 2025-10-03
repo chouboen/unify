@@ -27,18 +27,27 @@
 }
 
 //首頁介紹區塊
-.intro {
+
+.intro-text {
+  width: 500px;
+
   .intro-logo {
     width: 50px;
   }
   .h1 {
-    font-size: 35px;
+    font-size: 33px;
     font-weight: 600;
     letter-spacing: 0.2rem;
   }
 
-  .h2 {
-    font-size: 18px;
-    font-weight: 600;
-  }
+  line-height: 1.5;
+}
+
+.intro-imgBig {
+  width: 453.5px;
+}
+// 這邊照片有個莫名出現的間隔找不出原因，大概3.5px，只好先暴力加上大圖
+
+.intro-imgSm {
+  width: 220px;
 }

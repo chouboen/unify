@@ -9,7 +9,7 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <main>
+    
    
 <!-- 首頁大圖輪播 -->
 <!-- 已修復：圖片太大的問題，使用 CSS 控制高度和 object-fit -->
@@ -55,21 +55,28 @@
   </button>
 </div>
 </div>
+
+<main>
 <!--    首頁介紹區塊    -->
 
-<div class="intro text-center mb-50">
-    
+<div class="display-flex align-center  mb-50">
+  <div class="intro-text mr-50">
       <h1 class="h1 mb-30"><img class="intro-logo mr-10" src="../assets/logo/unify-logo.png" alt="Logo">國基冷凍工程股份有限公司</h1>
     <p class="mb-20">國基冷凍是一家以冷凍領域為核心的綜合性企業，專注於冷凍系統設備的買賣、維修服務、工程設計及機組組裝業務。
 </p>
     <p class="mb-20">歷經二十六年的深耕經營，在全體同仁的共同努力下，我們不斷突破自我，追求卓越。
 </p>
     <p>為因應時代變遷與產業發展，我們持續創新，致力於提供高品質的產品與服務，滿足客戶多元需求。</p>
-    
-      </div>
+  </div> 
+  <div class="intro-img">
+<div><img class="intro-imgBig mb-10" src="../assets/images/2-1.jpg" alt=""></div>
+<img class="intro-imgSm mr-10" src="../assets/images/3-1-2.jpg" alt="">
+<img class="intro-imgSm" src="../assets/images/1-1-2.jpg" alt="">
+  </div>   
+  </div>
 
 
-      <main>
+    </main>
   
    <%- include('./layout/footer'); -%>
    <script type="module" src="../main.js"></script>
