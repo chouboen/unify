@@ -240,6 +240,10 @@ a {
   margin-right: 50px;
 }
 
+.ml-50 {
+  margin-left: 50px;
+}
+
 .pl-10 {
   padding-left: 10px;
 }
@@ -313,7 +317,7 @@ nav a:hover::after {
   }
 }
 .intro-text {
-  width: 500px;
+  max-width: 500px;
   line-height: 1.5;
 }
 .intro-text .intro-logo {
@@ -322,10 +326,41 @@ nav a:hover::after {
 
 .intro-imgBig {
   width: 453.5px;
+  -o-object-fit: cover;
+     object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  -o-object-position: center;
+     object-position: center; /* 圖片中心對齊 */
 }
 
 .intro-imgSm {
   width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  -o-object-position: center;
+     object-position: center; /* 圖片中心對齊 */
+}
+
+.co-brand {
+  padding: 80px 0;
+  background-color: var(--bg-light-blue);
+  line-height: 1.5;
+}
+.co-brand .imgBig {
+  width: 453.5px;
+  -o-object-fit: cover;
+     object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  -o-object-position: center;
+     object-position: center; /* 圖片中心對齊 */
+}
+.co-brand .imgSm {
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  -o-object-position: center;
+     object-position: center; /* 圖片中心對齊 */
+}
+.co-brand .co-brand-text {
+  max-width: 500px;
 }
 
 .card {
@@ -338,6 +373,7 @@ nav a:hover::after {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0;
 }
 .card .card-img-overlay {
   display: flex;
@@ -375,11 +411,12 @@ nav a:hover::after {
 /* 每個文字項目的樣式 */
 .scroll-item {
   padding: 10px 15px; /* 內距 */
-  background: black; /* 背景色 */
-  color: white; /* 文字顏色 */
-  border-radius: 16px; /* 圓角 */
-  margin-right: 10px; /* 項目間距 */
+  background-color: var(--bg-light-blue);
+  color: black; /* 文字顏色 */
+  border-radius: 10px; /* 圓角 */
+  margin-right: 15px; /* 項目間距 */
   font-size: 16px; /* 文字大小 */
+  border: 1px solid black;
 }
 
 /* 滾動動畫 */

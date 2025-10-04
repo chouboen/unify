@@ -29,7 +29,7 @@
 //首頁介紹區塊
 
 .intro-text {
-  width: 500px;
+  max-width: 500px;
 
   .intro-logo {
     width: 50px;
@@ -40,11 +40,39 @@
 
 .intro-imgBig {
   width: 453.5px;
+  object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  object-position: center; /* 圖片中心對齊 */
 }
 // 這邊照片有個莫名出現的間隔找不出原因，大概3.5px，只好先暴力加上大圖
 
 .intro-imgSm {
   width: 220px;
+  object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  object-position: center; /* 圖片中心對齊 */
+}
+
+//合作品牌區塊
+.co-brand {
+  padding: 80px 0;
+  background-color: var(--bg-light-blue);
+  line-height: 1.5;
+
+  .imgBig {
+    width: 453.5px;
+    object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+    object-position: center; /* 圖片中心對齊 */
+  }
+  // 這邊照片有個莫名出現的間隔找不出原因，大概3.5px，只好先暴力加上大圖
+
+  .imgSm {
+    width: 200px;
+    object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+    object-position: center; /* 圖片中心對齊 */
+  }
+
+  .co-brand-text {
+    max-width: 500px;
+  }
 }
 
 //服務項目卡片區塊
@@ -53,11 +81,13 @@
   width: 200px;
   height: 300px;
   border: 0px;
+
   img {
     width: 200px;
     height: 300px;
     object-fit: cover;
-    // 圖片比例：https://ithelp.ithome.com.tw/m/articles/10297339
+    border-radius: 0;
+    // 圖片比例不改變：https://ithelp.ithome.com.tw/m/articles/10297339
   }
   .card-img-overlay {
     display: flex;
@@ -86,7 +116,6 @@
 .scroll-container {
   max-width: 100%; /* 容器寬度為視窗寬度 */
   overflow: hidden; /* 隱藏溢出內容 */
-
   padding: 15px 0; /* 上下內距 */
 }
 
@@ -100,11 +129,12 @@
 /* 每個文字項目的樣式 */
 .scroll-item {
   padding: 10px 15px; /* 內距 */
-  background: black; /* 背景色 */
-  color: white; /* 文字顏色 */
-  border-radius: 16px; /* 圓角 */
-  margin-right: 10px; /* 項目間距 */
+  background-color: var(--bg-light-blue);
+  color: black; /* 文字顏色 */
+  border-radius: 10px; /* 圓角 */
+  margin-right: 15px; /* 項目間距 */
   font-size: 16px; /* 文字大小 */
+  border: 1px solid black;
 }
 
 /* 滾動動畫 */
