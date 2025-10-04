@@ -34,11 +34,6 @@
   .intro-logo {
     width: 50px;
   }
-  .h1 {
-    font-size: 33px;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-  }
 
   line-height: 1.5;
 }
@@ -50,4 +45,79 @@
 
 .intro-imgSm {
   width: 220px;
+}
+
+//服務項目卡片區塊
+
+.card {
+  width: 200px;
+  height: 300px;
+  border: 0px;
+  img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    // 圖片比例：https://ithelp.ithome.com.tw/m/articles/10297339
+  }
+  .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; // 垂直對齊底部
+    align-items: center; // 水平居中
+    height: 100%; // 確保佔滿卡片高度
+
+    h5 {
+      text-align: center;
+      margin: 0; // 移除預設外邊距
+      text-shadow: 2.5px 2.5px 4px rgba(0, 0, 0, 0.8); /* 黑色陰影，適應亮色背景 */
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  a:hover {
+    transform: scale(1.03);
+    transition: all 0.5s ease 0s;
+  }
+}
+
+//橫向滾動文字
+/* 外層容器樣式 */
+.scroll-container {
+  max-width: 100%; /* 容器寬度為視窗寬度 */
+  overflow: hidden; /* 隱藏溢出內容 */
+
+  padding: 15px 0; /* 上下內距 */
+}
+
+/* 滾動內容容器 */
+.scroll-content {
+  display: inline-flex; /* 使用 inline-flex 讓內容在一行排列 */
+  white-space: nowrap; /* 防止文字換行 */
+  animation: scroll 180s linear infinite; /* 線性無限滾動，20秒一次循環 */
+}
+
+/* 每個文字項目的樣式 */
+.scroll-item {
+  padding: 10px 15px; /* 內距 */
+  background: black; /* 背景色 */
+  color: white; /* 文字顏色 */
+  border-radius: 16px; /* 圓角 */
+  margin-right: 10px; /* 項目間距 */
+  font-size: 16px; /* 文字大小 */
+}
+
+/* 滾動動畫 */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* 從當前位置開始（文字可見） */
+  }
+  100% {
+    transform: translateX(-50%); /* 移動到複製內容的起點（一半寬度） */
+  }
+}
+
+/* 可選：滑鼠懸停暫停動畫 */
+.scroll-content:hover {
+  animation-play-state: paused;
 }

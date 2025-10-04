@@ -142,13 +142,38 @@ table {
 }
 
 // 以下設定通用樣式
+:root {
+  --primary-blue: #2f318b;
+  --primary-red: #e62129;
+  --neutral-black: #000000;
+  --bg-light-blue: #eaf1fb;
+  --bg-white: #ffffff;
+  --bg-dark-blue: #1a253f;
+  --accent-tech-blue: #3b82f6;
+  --accent-cool-gray: #93c5fd;
+  --accent-light-red: #f87171;
+}
+
+.h1 {
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.h2 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: "Noto Sans TC", sans-serif;
+  color: var(--neutral-black);
 }
 
-main {
+.main {
   max-width: 1020px;
   margin: 0 auto;
 }
@@ -160,21 +185,6 @@ a {
   font-weight: 500;
   color: black;
   position: relative;
-}
-a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  background-color: #ff0000;
-  position: absolute;
-  right: 0;
-  transition: 0.4s;
-  bottom: -8px;
-}
-a:hover::after {
-  width: 100%;
-  left: 0;
 }
 
 .display-flex {
@@ -193,6 +203,10 @@ a:hover::after {
 }
 
 //間距設定
+
+.mb-80 {
+  margin-bottom: 80px;
+}
 .mb-50 {
   margin-bottom: 50px;
 }
@@ -231,7 +245,7 @@ a:hover::after {
 
 // 區塊分割線
 .divider {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--bg-dark-blue);
 }
 
 @import "./layout/header.scss";

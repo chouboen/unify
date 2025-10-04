@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+在 reset CSS 或全域樣式中為 * 設定 box-sizing: border-box，這裡額外針對偽元素補上，
+避免它們意外採用預設的 content-box 而導致排版錯誤。 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: #2f318b;
+  --primary-red: #e62129;
+  --neutral-black: #000000;
+  --bg-light-blue: #eaf1fb;
+  --bg-white: #ffffff;
+  --bg-dark-blue: #1a253f;
+  --accent-tech-blue: #3b82f6;
+  --accent-cool-gray: #93c5fd;
+  --accent-light-red: #f87171;
+}
+
+.h1 {
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.h2 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--neutral-black);
+}
+
+.main {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  color: black;
+  position: relative;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.mr-50 {
+  margin-right: 50px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.p-10 {
+  padding: 10px 0;
+}
+
+.divider {
+  border-bottom: 1px solid var(--bg-dark-blue);
+}
+
+nav {
+  color: black;
+  background-color: white;
+}
+nav .logo p {
+  font-weight: 500;
+  font-size: 20px;
+}
+nav img {
+  width: 50px;
+  padding: 15px 0;
+  margin-left: 50px;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #ff0000;
+  position: absolute;
+  right: 0;
+  transition: 0.4s;
+  bottom: -8px;
+}
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.footer {
+  background: #69F0AE;
+  font-size: 64px;
+}
+
+#carouselExampleCaptions .carousel-caption {
+  text-shadow: 2.5px 2.5px 4px rgba(0, 0, 0, 0.8); /* 黑色陰影，適應亮色背景 */
+}
+#carouselExampleCaptions h5 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#carouselExampleCaptions p {
+  font-weight: 500;
+}
+
+.carousel-img {
+  height: 600px; /* 設定固定高度，您可調整為 400px 或其他值 */
+  -o-object-fit: cover;
+     object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
+  -o-object-position: center;
+     object-position: center; /* 圖片中心對齊 */
+}
+
+/* 響應式調整：小螢幕時高度可變 */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 300px; /* 手機版縮小高度 */
+  }
+}
+.intro-text {
+  width: 500px;
+  line-height: 1.5;
+}
+.intro-text .intro-logo {
+  width: 50px;
+}
+
+.intro-imgBig {
+  width: 453.5px;
+}
+
+.intro-imgSm {
+  width: 220px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  border: 0px;
+}
+.card img {
+  width: 200px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+.card .card-img-overlay h5 {
+  text-align: center;
+  margin: 0;
+  text-shadow: 2.5px 2.5px 4px rgba(0, 0, 0, 0.8); /* 黑色陰影，適應亮色背景 */
+  color: white;
+  font-size: 20px;
+}
+.card a:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease 0s;
+}
+
+/* 外層容器樣式 */
+.scroll-container {
+  max-width: 100%; /* 容器寬度為視窗寬度 */
+  overflow: hidden; /* 隱藏溢出內容 */
+  padding: 15px 0; /* 上下內距 */
+}
+
+/* 滾動內容容器 */
+.scroll-content {
+  display: inline-flex; /* 使用 inline-flex 讓內容在一行排列 */
+  white-space: nowrap; /* 防止文字換行 */
+  animation: scroll 180s linear infinite; /* 線性無限滾動，20秒一次循環 */
+}
+
+/* 每個文字項目的樣式 */
+.scroll-item {
+  padding: 10px 15px; /* 內距 */
+  background: black; /* 背景色 */
+  color: white; /* 文字顏色 */
+  border-radius: 16px; /* 圓角 */
+  margin-right: 10px; /* 項目間距 */
+  font-size: 16px; /* 文字大小 */
+}
+
+/* 滾動動畫 */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* 從當前位置開始（文字可見） */
+  }
+  100% {
+    transform: translateX(-50%); /* 移動到複製內容的起點（一半寬度） */
+  }
+}
+/* 可選：滑鼠懸停暫停動畫 */
+.scroll-content:hover {
+  animation-play-state: paused;
+}/*# sourceMappingURL=all.css.map */

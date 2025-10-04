@@ -1,6 +1,6 @@
 nav {
-  background-color: white;
   color: black;
+  background-color: white;
   .logo {
     p {
       font-weight: 500;
@@ -12,5 +12,21 @@ nav {
     width: 50px;
     padding: 15px 0;
     margin-left: 50px;
+  }
+
+  a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #ff0000;
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+    bottom: -8px;
+  }
+  a:hover::after {
+    width: 100%;
+    left: 0;
   }
 }
