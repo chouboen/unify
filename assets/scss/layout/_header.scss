@@ -29,35 +29,16 @@ nav {
     width: 100%;
     left: 0;
   }
-
-  // 下拉選單hover樣式重寫
-  .dropdown-item {
-    a::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 4px;
-      background-color: black !important;
-      position: absolute;
-      right: 0;
-      transition: 0.4s;
-      bottom: -7px;
-    }
-    a:hover::after {
-      width: 100%;
-      left: 0;
-    }
-  }
 }
 
-// 下拉選單hover樣式覆蓋
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 0em;
-  vertical-align: 0em;
-  content: "";
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
-}
+// 下拉選單hover樣式覆蓋（已捨棄）
+// .dropdown-toggle::after {
+//   display: inline-block;
+//   margin-left: 0em;
+//   vertical-align: 0em;
+//   content: "";
+//   border-top: 0;
+//   border-right: 0;
+//   border-bottom: 0;
+//   border-left: 0;
+// }
