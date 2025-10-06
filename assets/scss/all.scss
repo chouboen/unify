@@ -202,6 +202,10 @@ a {
   text-align: center;
 }
 
+.text-end {
+  text-align: end;
+}
+
 //間距設定
 
 .mb-80 {
@@ -239,8 +243,18 @@ a {
   margin-left: 50px;
 }
 
+.pl-60 {
+  padding-left: 60px;
+}
+
+.pl-50 {
+  padding-left: 50px;
+}
 .pl-10 {
   padding-left: 10px;
+}
+.pt-20 {
+  padding-top: 20px;
 }
 .p-10 {
   padding: 10px 0;

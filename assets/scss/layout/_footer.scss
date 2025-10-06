@@ -1,4 +1,45 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+footer {
+  color: black;
+  background-color: var(--bg-light-blue);
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  img {
+    width: 50px;
+    padding: 15px 0;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    color: black;
+    position: relative;
+    font-size: 16px;
+  }
+
+  a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #ff0000;
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+    bottom: -7px;
+  }
+  a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.copyright {
+  color: black;
+  background-color: var(--bg-light-blue);
+  font-weight: 300;
+  font-size: 10px;
 }

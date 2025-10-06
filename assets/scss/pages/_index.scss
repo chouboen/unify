@@ -76,7 +76,6 @@
 }
 
 //服務項目卡片區塊
-
 .card {
   width: 200px;
   height: 300px;
@@ -129,12 +128,12 @@
 /* 每個文字項目的樣式 */
 .scroll-item {
   padding: 10px 15px; /* 內距 */
-  background-color: var(--bg-light-blue);
+  background-color: white;
   color: black; /* 文字顏色 */
-  border-radius: 10px; /* 圓角 */
+
   margin-right: 15px; /* 項目間距 */
   font-size: 16px; /* 文字大小 */
-  border: 1px solid black;
+  border: 0.5px solid black;
 }
 
 /* 滾動動畫 */
