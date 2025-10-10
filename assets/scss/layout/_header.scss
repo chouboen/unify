@@ -22,6 +22,23 @@ nav {
     width: 100%;
     left: 0;
   }
+
+  //偷懶（不知道怎麼調整，先這樣）
+  .logo-a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+    bottom: -7px;
+  }
+  .logo-a::after {
+    width: 100%;
+    left: 0;
+  }
 }
 
 // 下拉選單hover樣式覆蓋（已捨棄）

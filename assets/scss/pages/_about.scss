@@ -1,0 +1,17 @@
+ol {
+  li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    line-height: 2;
+    // 縮排設定
+    text-indent: -1em;
+    padding-inline-start: 180px;
+    padding-inline-end: 180px;
+    text-align: match-parent;
+    unicode-bidi: isolate;
+  }
+}
+
+p {
+  text-indent: 2em;
+}

@@ -167,6 +167,17 @@ table {
   letter-spacing: 0.2rem;
 }
 
+.h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -208,6 +219,9 @@ a {
 }
 
 //間距設定
+.mt-80 {
+  margin-top: 80px;
+}
 
 .mb-80 {
   margin-bottom: 80px;
@@ -269,3 +283,4 @@ a {
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 @import "./pages/index.scss";
+@import "./pages/about.scss";
