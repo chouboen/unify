@@ -1,4 +1,5 @@
 // 字體設定
+// Noto Sans 思源黑體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 // 以下為自定義Bootstrap
 
@@ -174,6 +175,8 @@ table {
 }
 
 p {
+  font-size: 16px;
+
   font-weight: 400;
   line-height: 1.5;
 }
@@ -197,6 +200,10 @@ a {
   font-weight: 500;
   color: black;
   position: relative;
+}
+
+.blue-bg {
+  background-color: var(--bg-light-blue);
 }
 
 .display-flex {
@@ -229,6 +236,9 @@ a {
 .mb-50 {
   margin-bottom: 50px;
 }
+.mb-40 {
+  margin-bottom: 40px;
+}
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -250,12 +260,20 @@ a {
 .mr-30 {
   margin-right: 30px;
 }
+
+.mr-40 {
+  margin-right: 40px;
+}
 .mr-50 {
   margin-right: 50px;
 }
 
 .ml-50 {
   margin-left: 50px;
+}
+
+.pt-80 {
+  padding-top: 80px;
 }
 
 .pl-60 {
@@ -271,13 +289,29 @@ a {
 .pt-20 {
   padding-top: 20px;
 }
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
 .p-10 {
   padding: 10px 0;
 }
 
 // 區塊分割線
-.divider {
+.divider-bottom {
   border-bottom: 1px solid var(--bg-dark-blue);
+}
+
+.divider-top {
+  border-top: 1px solid var(--bg-dark-blue);
+}
+
+//背景顏色
+.blue-bg {
+  background-color: var(--bg-light-blue);
 }
 
 @import "./layout/header.scss";

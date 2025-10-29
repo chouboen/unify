@@ -23,32 +23,22 @@ nav {
     left: 0;
   }
 
-  //偷懶（不知道怎麼調整，先這樣）
+  //為了消除logo的a標籤link在hover時會出現的紅線
+  //所以寫了這條，但其實也不是很懂，只好把顏色改成透明，眼不見為淨，以後再來改 (┛`д´)┛
+
   .logo-a::after {
     content: "";
     display: block;
     width: 0;
-    height: 4px;
-    background-color: white;
+    height: 0px;
+    background-color: transparent;
     position: absolute;
     right: 0;
     transition: 0.4s;
     bottom: -7px;
   }
-  .logo-a::after {
-    width: 100%;
-    left: 0;
-  }
+  // .logo-a::after {
+  //   width: 100%;
+  //   left: 0;
+  // }
 }
-
-// 下拉選單hover樣式覆蓋（已捨棄）
-// .dropdown-toggle::after {
-//   display: inline-block;
-//   margin-left: 0em;
-//   vertical-align: 0em;
-//   content: "";
-//   border-top: 0;
-//   border-right: 0;
-//   border-bottom: 0;
-//   border-left: 0;
-// }

@@ -14,26 +14,221 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <main class="mt-80">
-      <h1 class="main h1 text-center mb-30">關於國基</h1>
-      <section class="main mb-80">
-        <p class="mb-20">
-          國際聯合股份有限公司成立於1993年，為擴大業務需求1998年成立國基冷凍工程股份有限公司，並於2003年成立上海國統工貿，
-          以提供大陸客戶更直接更好的服務。
-        </p>
-        <p class="mb-20">
-          更在2009年於廈門成立國統工貿(廈門)有限公司，以擴大對客戶之服務。目前各式機組及整廠設備外銷至緬甸、越南、印尼、
-          菲律賓及中國等地區國家，並深受客戶之肯定。
-        </p>
-        <p class="mb-20">
-          為因應市場節能及高效率之需求，陸續開發全自動熱氣除霜系統、CO2機組系統，並代理經銷世界先進之設備如SRM系列
-          壓縮機組、GUNTNER各型蒸發器及冷卻器、HANSEN各式控制元件及AMG各類閥門，再再都是為了能創造客戶更多選擇方案
-          及節能效果。
-        </p>
-        <p class="mb-80">
-          公司是以冷凍領域為主的綜合性企業，主要營業項目集中在冷凍系統設備之買賣、維修服務、工程及機組組裝業務，
-          歷經二十六年來的過程，在各位同仁努力之下不斷超越自己、為因應時代的變遷及發展。
-        </p>
+    <main class="divider-top mb-80">
+      <div class="pt-80 pb-80 blue-bg bg-shadow">
+        <h1 class="main h1 text-center mb-30">關於國基</h1>
+        <!-- 上半部份，要做flex並排效果 -->
+        <section class="main display-flex align-center">
+          <!-- 公司介紹影片 -->
+          <div class="main text-center mr-40 align-center">
+            <video
+              class="box-shadow"
+              width="480"
+              height="270"
+              controls
+              autoplay
+              muted
+            >
+              <source src="/assets/國基冷凍 final.mp4" type="video/mp4" />
+              很抱歉，您的瀏覽器不支援影片播放。
+            </video>
+            <!-- 影片尺寸換算
+          1920:1080
+          16:9
+          960:540 
+          560:315
+        480:270
+      640:360-->
+          </div>
+          <!-- 介紹主文 -->
+          <div>
+            <p class="mb-20">
+              國基冷凍前身為「國際聯合股份有限公司」，其成立於 1993
+              年，為擴大業務需求，1998 年成立國基冷凍工程股份有限公司，並於 2003
+              年成立上海國統工貿， 以提供大陸客戶更直接更好的服務。
+            </p>
+            <p class="mb-20">
+              更在2009年於廈門成立國統工貿（廈門）有限公司，以擴大對客戶之服務。目前各式機組及整廠設備外銷至緬甸、越南、印尼、
+              菲律賓及中國等地區國家，深受客戶之肯定。
+            </p>
+            <p class="mb-20">
+              為因應市場節能及高效率之需求，陸續開發全自動熱氣除霜系統、CO2
+              機組系統，並代理經銷世界先進之設備如 SRM 系列 壓縮機組、德國昆騰
+              GUNTNER 各型蒸發器及冷卻器、HANSEN 各式控制元件及 AMG
+              各類閥門，為創造客戶更多選擇方案 及節能效果。
+            </p>
+            <p>
+              國基是以冷凍領域為主的綜合性企業，主要營業項目集中在冷凍系統設備之買賣、維修服務、工程及機組組裝業務，
+              歷經二十六年來的過程，在眾多同仁的努力之下，不斷超越自己、因應時代的變遷及發展。
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- 時間軸及剩餘介紹 -->
+      <section class="main">
+        <!-- unity 時間軸 -->
+        <!-- 使用模板：https://codepen.io/krishnab/pen/OPwqbW -->
+        <section class="main mb-50">
+          <ul class="timeline">
+            <!-- Item 1 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">創立國際聯合股份有限公司</span>
+                  <span class="time-wrapper"
+                    ><span class="time">1993</span></span
+                  >
+                </div>
+                <div class="desc">
+                  創始人王木淋 1993
+                  年於高雄創立國際聯合股份有限公司，致力於冷凍工程技術服務
+                </div>
+              </div>
+            </li>
+
+            <!-- Item 2 -->
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">興建高雄九曲堂工廠</span>
+                  <span class="time-wrapper"
+                    ><span class="time">1997</span></span
+                  >
+                </div>
+              </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">成立國基冷凍工程股份有限公司</span>
+                  <span class="time-wrapper"
+                    ><span class="time">1998</span></span
+                  >
+                </div>
+                <div class="desc">
+                  為擴大服務範圍，1998 年正式成立國基冷凍工程股份有限公司
+                </div>
+              </div>
+            </li>
+            <!-- Item 4 -->
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">成立上海國統工貿有限公司</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2004</span></span
+                  >
+                </div>
+                <div class="desc">
+                  公司遷址並興建新廠房，擴大服務範圍與業務規模
+                </div>
+              </div>
+            </li>
+            <!-- Item 5 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">高雄仁武區仁心路新廠落成</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2008</span></span
+                  >
+                </div>
+                <div class="desc">
+                  於 2004
+                  年成立上海國統工貿有限公司，以提供大陸客戶更直接更好的服務
+                </div>
+              </div>
+            </li>
+            <!-- Item 6 -->
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">成立國統工貿（廈門）有限公司</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2009</span></span
+                  >
+                </div>
+              </div>
+            </li>
+            <!-- Item 7 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">國統工貿（廈門）新辦公室成立</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2013</span></span
+                  >
+                </div>
+              </div>
+            </li>
+            <!-- Item 8 -->
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">簽下德國昆騰 GUNTNER 授權經銷商</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2016</span></span
+                  >
+                  <div class="desc">
+                    與國際廠牌德國昆騰 GUNTNER
+                    簽約，成為在台授權經銷商夥伴，服務品質更上一層
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Item 9 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">國統工貿（廈門）廠辦合一</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2016</span></span
+                  >
+                </div>
+                <div class="desc">致力於服務兩岸客戶，廠辦規模持續升級</div>
+              </div>
+            </li>
+
+            <!-- Item 10 -->
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">簽下冰輪環境台灣市場代理設備廠商</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2018</span></span
+                  >
+                  <div class="desc">
+                    與知名國際廠牌冰輪環境簽約，成為在台代理設備廠商，提供兩岸更優秀的設備與服務
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Item 11 -->
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="hexa"></span>
+                  <span class="flag">持續向卓越邁進</span>
+                  <span class="time-wrapper"
+                    ><span class="time">2020-</span></span
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
 
         <h2 class="h3 mb-30">公司近期發展目標：</h2>
         <ol>
@@ -41,7 +236,8 @@
             在外透過與學校的產學、教學合作，培養專業人才，成為本業人才庫，為公司、社會培養學以致用及與時俱進人才。對內定期對員工之本職學能與管理改善方面實施之教育訓練，以提昇工作及人員管理的效能及品質。
           </li>
           <li class="mb-20">
-            在創新上致力研發電磁冷凍、超低溫機組及CO2冷媒之系統設備運用等，以符合效能提升，產業升級的目標。
+            在創新上致力研發電磁冷凍、超低溫機組及 CO2
+            冷媒之系統設備運用等，以符合效能提升，產業升級的目標。
           </li>
           <li class="mb-20">
             全面無紙化作業流程之推行，提供客戶更透明、即時資料管理之需求，進一步與客戶建立互信關係、資訊共享的目標。
@@ -49,7 +245,7 @@
           <li class="mb-20">
             為提供更全面即時及有效的服務，於今年成立桃園服務據點，在時效及成本上皆能回饋給支持我們的客戶。
           </li>
-          <li class="mb-30">
+          <li class="mb-50">
             為求系統24小時的全面監管，成立中央監視設備中心，配合客戶保固及定檢做全方位之服務，使客戶在冷凍系統設備之使用更為可靠，並減少不必要的損壞支出。
           </li>
         </ol>
