@@ -5,13 +5,13 @@
   }
   h5 {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 36px;
     margin-bottom: 20px;
   }
 }
 
 .carousel-img {
-  height: 600px; /* 設定固定高度，您可調整為 400px 或其他值 */
+  height: 800px; /* 設定固定高度，您可調整為 400px 或其他值 */
   object-fit: cover; /* 讓圖片填滿容器，裁切多餘部分而不失真 */
   object-position: center; /* 圖片中心對齊 */
 }
@@ -79,7 +79,7 @@
   border: 0px;
 
   img {
-    width: 200px;
+    max-width: 200px;
     height: 300px;
     object-fit: cover;
     border-radius: 0;
@@ -127,8 +127,6 @@
   padding: 10px 15px; /* 內距 */
   background-color: white;
   color: black; /* 文字顏色 */
-
-  margin-right: 15px; /* 項目間距 */
   font-size: 16px; /* 文字大小 */
   border: 0.5px solid black;
 }
