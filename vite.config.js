@@ -39,12 +39,9 @@ export default defineConfig({
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync("pages/**/*.html")
+          .sync("pages/*.html") // <-- 只抓 pages 下面的 HTML，不抓子資料夾
           .map((file) => [
-            path.relative(
-              "pages",
-              file.slice(0, file.length - path.extname(file).length)
-            ),
+            path.basename(file, path.extname(file)), // <-- 只取檔名，不保留資料夾
             fileURLToPath(new URL(file, import.meta.url)),
           ])
       ),
@@ -52,3 +49,21 @@ export default defineConfig({
     outDir: "dist",
   },
 });
+// 原本的code，先註解掉，無改善的話就改回來
+//   build: {
+//     rollupOptions: {
+//       input: Object.fromEntries(
+//         glob
+//           .sync("pages/**/*.html")
+//           .map((file) => [
+//             path.relative(
+//               "pages",
+//               file.slice(0, file.length - path.extname(file).length)
+//             ),
+//             fileURLToPath(new URL(file, import.meta.url)),
+//           ])
+//       ),
+//     },
+//     outDir: "dist",
+//   },
+// });
