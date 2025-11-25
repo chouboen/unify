@@ -3,45 +3,25 @@ import { ViteEjsPlugin } from "vite-plugin-ejs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { glob } from "glob";
-
 import liveReload from "vite-plugin-live-reload";
 
-function moveOutputPlugin() {
-  return {
-    name: "move-output",
-    enforce: "post",
-    apply: "build",
-    async generateBundle(options, bundle) {
-      for (const fileName in bundle) {
-        if (fileName.startsWith("pages/")) {
-          const newFileName = fileName.slice("pages/".length);
-          bundle[fileName].fileName = newFileName;
-        }
-      }
-    },
-  };
-}
-
 export default defineConfig({
-  // base 的寫法:
-  // base: '/Repository 的名稱/'
-  base: "/unify/",
+  base: "/unify/", // GitHub Pages repo 名稱
   plugins: [
     liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
     ViteEjsPlugin(),
-    moveOutputPlugin(),
+    // moveOutputPlugin 已移除
   ],
   server: {
-    // 啟動 server 時預設開啟的頁面
     open: "pages/index.html",
   },
   build: {
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync("pages/*.html") // <-- 只抓 pages 下面的 HTML，不抓子資料夾
+          .sync("pages/*.html") // 只抓 pages 下面的 HTML
           .map((file) => [
-            path.basename(file, path.extname(file)), // <-- 只取檔名，不保留資料夾
+            path.basename(file, path.extname(file)), // 只取檔名
             fileURLToPath(new URL(file, import.meta.url)),
           ])
       ),
@@ -49,7 +29,45 @@ export default defineConfig({
     outDir: "dist",
   },
 });
-// 原本的code，先註解掉，無改善的話就改回來
+
+// import { defineConfig } from "vite";
+// import { ViteEjsPlugin } from "vite-plugin-ejs";
+// import { fileURLToPath } from "node:url";
+// import path from "node:path";
+// import { glob } from "glob";
+
+// import liveReload from "vite-plugin-live-reload";
+
+// function moveOutputPlugin() {
+//   return {
+//     name: "move-output",
+//     enforce: "post",
+//     apply: "build",
+//     async generateBundle(options, bundle) {
+//       for (const fileName in bundle) {
+//         if (fileName.startsWith("pages/")) {
+//           const newFileName = fileName.slice("pages/".length);
+//           bundle[fileName].fileName = newFileName;
+//         }
+//       }
+//     },
+//   };
+// }
+
+// export default defineConfig({
+//   // base 的寫法:
+//   // base: '/Repository 的名稱/'
+//   base: "/unify/",
+//   plugins: [
+//     liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+//     ViteEjsPlugin(),
+//     moveOutputPlugin(),
+//   ],
+//   server: {
+//     // 啟動 server 時預設開啟的頁面
+//     open: "pages/index.html",
+//   },
+
 //   build: {
 //     rollupOptions: {
 //       input: Object.fromEntries(
