@@ -13,12 +13,8 @@ function moveOutputPlugin() {
     apply: "build",
     async generateBundle(options, bundle) {
       for (const fileName in bundle) {
-        // if (fileName.startsWith("pages/")) {
-        //   const newFileName = fileName.slice("pages/".length);
-        //   bundle[fileName].fileName = newFileName;
-        // }
-        if (fileName.startsWith("unify/")) {
-          const newFileName = fileName.slice("unify/".length);
+        if (fileName.startsWith("pages/")) {
+          const newFileName = fileName.slice("pages/".length);
           bundle[fileName].fileName = newFileName;
         }
       }
